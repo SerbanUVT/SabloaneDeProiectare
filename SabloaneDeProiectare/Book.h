@@ -1,41 +1,36 @@
-#include <iostream>
-#include <string>
-#include <list>
+#ifndef BOOK_H
+#define BOOK_H
 
+#include <iostream>
+#include <vector>
+#include "Author.h"
+#include "Chapter.h"
 using namespace std;
+
 class Book {
-public:
+private:
 	string title;
-	list<string> paragraphs;
-	list<string> images;
-	list<string> tables;
+	vector<Author> authors;
+	vector<Chapter> chapters;
+public:
 	Book(string title) {
 		this->title = title;
+		authors = vector<Author>();
+		chapters = vector<Chapter>();
 	}
 
-	void createNewParagraph(string paragraph) {
-		paragraphs.push_back(paragraph);
+	void addAuthor(Author author) {
+		authors.push_back(author);
 	}
-	void createNewImage(string image) {
-		images.push_back(image);
+	int createChapter(string name) {
+		chapters.push_back(Chapter(name));
+		return chapters.size() - 1;
 	}
-	void createNewTable(string table) {
-		tables.push_back(table);
-	}
-	void showlist(list<string> f)
-	{
-		list<string>::iterator it;
-		for (it = f.begin(); it != f.end(); ++it)
-			cout << *it << " ";
-		cout << endl;
-	}
-	void print() {
-		cout << "Titlu carte: " << title << endl;
-		cout << "Lista de paragrafe: ";
-		showlist(paragraphs);
-		cout << "Lista de imagini: ";
-		showlist(images);
-		cout << "Lista de tabele: ";
-		showlist(tables);
+	Chapter getChapter(int index) {
+		auto l = chapters.begin();
+		advance(l, index);
+		return *l;
 	}
 };
+
+#endif
