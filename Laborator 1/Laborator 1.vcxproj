@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6f8c9010-3a5d-4c79-98a1-cc7657b160b8}</ProjectGuid>
-    <RootNamespace>SabloaneDeProiectare</RootNamespace>
+    <ProjectGuid>{9978556b-4d7a-448a-9310-42f33925378a}</ProjectGuid>
+    <RootNamespace>Laborator1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,16 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Author.h" />
     <ClInclude Include="Book.h" />
-    <ClInclude Include="Chapter.h" />
-    <ClInclude Include="Image.h" />
-    <ClInclude Include="Paragraph.h" />
-    <ClInclude Include="SubChapter.h" />
-    <ClInclude Include="Table.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
